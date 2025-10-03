@@ -17,10 +17,10 @@ To see what's inside make a copy of the `llsp3` file,
  * Rename the extension from `llsp3` to `zip`
  * Extract the `.zip` file
  * Contents of the `zip(llsp3)` file: 
-  * `scratch.sb3` | Scratch-compatible editor file. This is also a binary file
-  * `monitors.json` | state of the blocks in the UI, zoom level, and other details
-  * `manifest.json` | bluetooth connection and hub info, last connection state
-  * `icon.svg` | screenshot of what the block code looks like
+    * `scratch.sb3` | Scratch-compatible editor file. This is also a binary file
+    * `monitors.json` | state of the blocks in the UI, zoom level, and other details
+    * `manifest.json` | bluetooth connection and hub info, last connection state
+    * `icon.svg` | screenshot of what the block code looks like
 
 ##### `scratch.sb3`
 The `scratch.sb3` is another binary file, rename the extension to `zip`, and extract the contents. It contains the `project.json` file, which has the final details of what the actual block-code makeup should look like.
