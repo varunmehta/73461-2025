@@ -22,3 +22,6 @@ To see what's inside make a copy of the `llsp3` file,
 
 ##### `scratch.sb3`
 The `scratch.sb3` is another binary file, rename the extension to `zip`, and extract the contents. It contains the `project.json` file, which has the final details of what the actual block-code makeup should look like.
+
+## Mission Plans
+Our mission planning is available under [`/plans`](/plans]
