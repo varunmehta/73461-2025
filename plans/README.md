@@ -11,4 +11,4 @@
 ![8/3](mission_8_3.png)
 
 ## Mission 12 & 9
-![12/9](mission_12_9.png)
+![12/9](missioon_12_9.png)
