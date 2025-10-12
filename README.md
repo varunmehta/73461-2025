@@ -27,4 +27,4 @@ The `scratch.sb3` is another binary file, rename the extension to `zip`, and ext
 Our mission planning is available under **[`/plans`](/plans)**
 
 ## BlockCode 
-![/block/PantheraTech.svg](/block/PantheraTech.svg)
+![/block/PantheraTech.svg](/block/PantheraTech.svg?raw=true)
