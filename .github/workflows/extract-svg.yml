@@ -1,0 +1,72 @@
+name: Extract SVG from LLSP3
+
+on:
+  push:
+    paths:
+      - 'block/PantheraTech.llsp3'  # Triggers when PantheraTech.llsp3 is pushed
+
+jobs:
+  extract-svg:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for proper git operations
+      
+      - name: Get changed LLSP3 files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            block/PantheraTech.llsp3
+      
+      - name: Extract SVG from LLSP3
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          file="block/PantheraTech.llsp3"
+          echo "Processing: $file"
+          
+          # LLSP3 files are typically ZIP archives
+          # Create a temporary directory for extraction
+          temp_dir=$(mktemp -d)
+          
+          # Extract the LLSP3 file
+          unzip -q "$file" -d "$temp_dir" || {
+            echo "Failed to extract $file"
+            exit 1
+          }
+          
+          # Look for icon.svg in the extracted contents
+          svg_file=$(find "$temp_dir" -name "icon.svg" -type f | head -n 1)
+          
+          if [ -n "$svg_file" ]; then
+            echo "Found icon.svg: $svg_file"
+            
+            # Copy to block/PantheraTech.svg
+            cp "$svg_file" "block/PantheraTech.svg"
+            echo "Copied SVG to: block/PantheraTech.svg"
+          else
+            echo "No icon.svg file found in $file"
+            exit 1
+          fi
+          
+          # Clean up temp directory
+          rm -rf "$temp_dir"
+      
+      - name: Commit and push changes
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add block/PantheraTech.svg
+          
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to PantheraTech.svg"
+          else
+            git commit -m "Extract icon.svg from PantheraTech.llsp3 as PantheraTech.svg"
+            git push
+          fi
