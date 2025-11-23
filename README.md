@@ -1,4 +1,4 @@
-# PantheraTech - 73461
+# PantheraTech - #73461
 Team **PantheraTech** [`#73461`] for 2025-26 codebase
 
 > More about [FIRST® LEGO® League Challenge](https://www.firstinspires.org/programs/fll/)
