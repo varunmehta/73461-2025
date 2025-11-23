@@ -1,13 +1,13 @@
-# PantheraTech - 73461-2025
-Team **PantheraTech** [`#73461`] for 2025 codebase
+# PantheraTech - 73461
+Team **PantheraTech** [`#73461`] for 2025-26 codebase
 
-> More about FIRST® LEGO® League Challenge: https://www.firstinspires.org/programs/fll/
-> The prompt for 2025-26 is **UNEARTHED™** https://info.firstinspires.org/first-age#programs
+> More about [FIRST® LEGO® League Challenge](https://www.firstinspires.org/programs/fll/)
+> 
+> The prompt for 2025-26 is [**FIRST® AGE™ - UNEARTHED™**](https://info.firstinspires.org/first-age#programs)
 
 ## Robot Game 
 
 ### Robot Design 
-
 ![docs/RobotDesign](/docs/RobotDesign.jpeg)
 
 ### Robot
@@ -40,7 +40,6 @@ Based on the list of missions, the team was able to solve and gain up to 300 poi
 ![12/9](docs/plans/missioon_12_9.png)
 
 ## Innovation Project
-
 ![docs/InnovationProject](/docs/InnovationProject.jpeg)
 
 ## Qualifiers
@@ -56,6 +55,5 @@ This award celebrates a team that made significant progress in their confidence 
 |---|---|---|---|---|---|
 | 12 | 73461 - PantheraTech | 210 | 170 | 190 | 210 |
 
-
 ### Final Total Scores
-TBD 
+Yet to be declared.
