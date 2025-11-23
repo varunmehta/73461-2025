@@ -1,6 +1,9 @@
 # PantheraTech - 73461-2025
 Team **PantheraTech** [`#73461`] for 2025 codebase
 
+> More about FIRST® LEGO® League Challenge: https://www.firstinspires.org/programs/fll/
+> The prompt for 2025-26 is **UNEARTHED™** https://info.firstinspires.org/first-age#programs
+
 ## Robot Game 
 
 ### Robot Design 
