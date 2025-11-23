@@ -1,22 +1,42 @@
 # PantheraTech - 73461-2025
 Team **PantheraTech** [`#73461`] for 2025 codebase
 
+## Robot Game 
 
-### Qualifiers
+### Robot Design 
+
+![docs/RobotDesign](/docs/RobotDesign.jpeg)
+
+### Robot
+![docs/Robot](/docs/Robot.jpeg)
+
+### Codebase
+The code is under [`/block`](/block) folder. The main program is under [PantheraTech.llsp3](/block/PantheraTech.llsp3)
+
+![/block/PantheraTech.svg](/block/PantheraTech.svg?raw=true)
+
+### Mission Plans
+Our mission planning is available under **[`/plans`](/plans)**
+
+Based on the list of missions, the team was able to solve and gain up to 300 points, but due to time constraint, they were not able to solve all missions in the stipulated time period.
+
+## Innovation Project
+
+![docs/InnovationProject](/docs/InnovationProject.jpeg)
+
+## Qualifiers
 The team participated on *Sat 11/22 2025* at [**North NJ - Bridgewater Raritan Brik Rampage Qualifying Event (Bridgewater Raritan Middle School)**](https://eventhub.firstinspires.org/leaderboard/ba8af290-4e72-492e-9bf9-a4381370147e/1103911a-04c7-4d08-a559-3fecce091943) 
 
-### Scores 
+### Breakthrough Award
+This award celebrates a team that made significant progress in their confidence and capability in at least one of the core areas of FIRST LEGO League.
+
+![docs/BreakthroughAward](/docs/BreakthroughAward.jpeg)
+
+### Robot Game Scores 
 | Rank	| Team Number and Name |	High Score |	Match 1 |	Match 2 |	Match 3 |
 |---|---|---|---|---|---|
 | 12 | 73461 - PantheraTech | 210 | 170 | 190 | 210 |
 
-## Codebase
-The code has 2 main folders [`/block`](/block) and [`python`](/python) for each type of code. For now the team is comfortable use block, and that is where all the code will reside.
 
-> The team will use block code!
-
-## Mission Plans
-Our mission planning is available under **[`/plans`](/plans)**
-
-## BlockCode 
-![/block/PantheraTech.svg](/block/PantheraTech.svg?raw=true)
+### Final Total Scores
+TBD 
