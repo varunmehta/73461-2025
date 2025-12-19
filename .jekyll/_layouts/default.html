@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ '/.jekyll/assets/img/favicon.png' | relative_url }}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+
+    <!-- Pico CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{{ '/.jekyll/assets/css/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/.jekyll/assets/css/base16.solarized.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/.jekyll/assets/css/custom.css' | relative_url }}">
+</head>
+<body>
+    {% if site.pages.size > 1 %}
+    <nav>
+        <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            {% for pg in site.pages %}
+                {% if pg.title and pg.url != '/' %}
+                <li><a href="{{ pg.url | relative_url }}">{{ pg.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+    {% endif %}
+
+    <header>&nbsp;</header>
+    <main>
+        {{ content }}
+    </main>
+    <footer>&nbsp;</footer>
+</body>
+</html>

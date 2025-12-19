@@ -1,0 +1,39 @@
+# Site settings
+title: "PantheraTech #73461"
+description: "FIRST LEGO League Challenge 2025-26 - UNEARTHED"
+baseurl: "/73461-2025"  # IMPORTANT: Must match repository name for GitHub Pages
+url: ""
+
+# Theme
+theme_color: azure
+bg_color: auto
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
+
+# Directory configuration
+layouts_dir: .jekyll/_layouts
+includes_dir: .jekyll/_includes
+sass:
+  sass_dir: .jekyll/_sass
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .jekyll/Gemfile
+  - .jekyll/Gemfile.lock
+  - .jekyll/vendor/
+
+# Enable relative links
+relative_links:
+  enabled: true
+  collections: false
+
+# Optional front matter
+optional_front_matter:
+  remove_originals: false
