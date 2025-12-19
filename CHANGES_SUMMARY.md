@@ -13,15 +13,29 @@
 
 This works both on GitHub and GitHub Pages.
 
-### Issue 2: Background Color Not Respecting `auto` Setting
-**Problem:** Layout had hardcoded `data-theme="dark"` instead of using config value.
+### Issue 2: Theme Not Switching with System Preference
+**Problem:** Layout didn't properly respond to system theme changes when `bg_color: auto`.
 
-**Fix:** Updated `.jekyll/_layouts/default.html` to use:
-```html
-<html lang="en" data-theme="{{ site.bg_color | default: 'auto' }}">
-```
+**Fix:** Added JavaScript to `.jekyll/_layouts/default.html` that:
+- Detects system color scheme preference (dark/light)
+- Sets theme on page load
+- Listens for system theme changes and updates automatically
+- Uses `prefers-color-scheme` media query
 
-Now your `bg_color: auto` setting in config will work correctly (follows system dark/light mode).
+Now your site will:
+- Start with the correct theme based on system preference
+- Automatically switch when you change system dark/light mode
+- Update in real-time without page refresh
+
+### Issue 3: Markdown Tables Not Rendering Properly
+**Problem:** Tables in README.md weren't styled correctly.
+
+**Fix:** Added comprehensive table styling to `.jekyll/assets/css/custom.css`:
+- Proper borders and spacing
+- Alternating row colors for readability
+- Responsive design for mobile devices
+- Uses Pico CSS variables for theme consistency
+- Horizontal scrolling on small screens
 
 ## 📋 Manual Steps Required
 

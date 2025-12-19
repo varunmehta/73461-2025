@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="{{ site.bg_color | default: 'auto' }}">
+<html lang="en"{% if site.bg_color == 'auto' %} data-theme="light"{% else %} data-theme="{{ site.bg_color }}"{% endif %}>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ site.description }}">
+    <meta name="color-scheme" content="light dark">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ '/.jekyll/assets/img/favicon.png' | relative_url }}">
@@ -21,6 +22,23 @@
     <link rel="stylesheet" href="{{ '/.jekyll/assets/css/styles.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/.jekyll/assets/css/base16.solarized.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/.jekyll/assets/css/custom.css' | relative_url }}">
+
+    {% if site.bg_color == 'auto' %}
+    <!-- Auto theme switcher -->
+    <script>
+        // Set theme based on system preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+        const setTheme = (dark) => {
+            document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        };
+
+        // Set initial theme
+        setTheme(prefersDark.matches);
+
+        // Listen for system theme changes
+        prefersDark.addEventListener('change', (e) => setTheme(e.matches));
+    </script>
+    {% endif %}
 </head>
 <body>
     {% if site.pages.size > 1 %}

@@ -48,7 +48,7 @@ The team participated on *Sat 11/22 2025* at [**North NJ - Bridgewater Raritan B
 ### Breakthrough Award
 This award celebrates a team that made significant progress in their confidence and capability in at least one of the core areas of FIRST LEGO League.
 
-![docs/BreakthroughAward](/docs/BreakthroughAward.jpeg)
+![docs/BreakthroughAward](docs/BreakthroughAward.jpeg)
 
 ### Robot Game Scores 
 | Rank	| Team Number and Name |	High Score |	Match 1 |	Match 2 |	Match 3 |

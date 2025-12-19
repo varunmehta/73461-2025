@@ -1,2 +1,42 @@
 /* Custom CSS for team-specific styling */
-/* Add your custom styles here */
+
+/* Ensure tables are properly styled */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  display: block;
+}
+
+table thead {
+  border-bottom: 2px solid var(--pico-table-border-color);
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--pico-table-border-color);
+}
+
+table th {
+  font-weight: 600;
+  background-color: var(--pico-table-row-stripped-background-color);
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: var(--pico-table-row-stripped-background-color);
+}
+
+/* Make table scrollable on small screens */
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 0.9rem;
+  }
+
+  table th,
+  table td {
+    padding: 0.5rem;
+  }
+}
