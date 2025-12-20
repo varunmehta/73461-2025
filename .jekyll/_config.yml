@@ -10,6 +10,14 @@ bg_color: auto
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  parse_block_html: true
+  hard_wrap: false
+  auto_ids: true
+  toc_levels: 1..6
+
 plugins:
   - jekyll-optional-front-matter
   - jekyll-relative-links
