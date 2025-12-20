@@ -13,7 +13,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Pico CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
@@ -41,23 +41,34 @@
     {% endif %}
 </head>
 <body>
-    {% if site.pages.size > 1 %}
-    <nav>
-        <ul>
-            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    {% assign page_count = 0 %}
+    {% for pg in site.pages %}
+        {% if pg.title and pg.url != '/' and pg.url != '/index.html' %}
+            {% assign page_count = page_count | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+
+    {% if page_count > 0 %}
+    {% capture first_heading %}{{ content | split: '<h1' | last | split: '>' | first | split: '</h1>' | first | strip_html | strip }}{% endcapture %}
+    {% assign home_title = first_heading | split: '>' | last | default: site.title %}
+    <nav style="position: sticky; top: 0; z-index: 1000; background: var(--pico-background-color); border-bottom: 1px solid var(--pico-muted-border-color); padding: 0.75rem 1rem; margin: 0;">
+        <ul style="display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; align-items: center;">
+            <li style="margin: 0;"><a href="{{ '/' | relative_url }}" style="text-decoration: none; font-weight: 600;">{{ home_title }}</a></li>
             {% for pg in site.pages %}
-                {% if pg.title and pg.url != '/' %}
-                <li><a href="{{ pg.url | relative_url }}">{{ pg.title }}</a></li>
+                {% if pg.title and pg.url != '/' and pg.url != '/index.html' %}
+                <li style="margin: 0;"><a href="{{ pg.url | relative_url }}" style="text-decoration: none;">{{ pg.title }}</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
     </nav>
     {% endif %}
 
-    <header>&nbsp;</header>
+    <header style="display: none;">&nbsp;</header>
     <main>
         {{ content }}
     </main>
-    <footer>&nbsp;</footer>
+    <footer style="margin-top: 3rem; padding: 2rem 0; border-top: 1px solid var(--pico-muted-border-color); text-align: center; font-size: 0.875rem; color: var(--pico-muted-color);">
+        <p>PantheraTech #73461 | FIRST LEGO League Challenge 2025-26</p>
+    </footer>
 </body>
 </html>

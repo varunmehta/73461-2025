@@ -1,12 +1,31 @@
 /* Custom CSS for team-specific styling */
 
-/* Ensure tables are properly styled */
+/* Navigation bar styling */
+nav {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--pico-primary);
+}
+
+/* Center first h1 as page title */
+main > h1:first-of-type {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Tables - proper rendering */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
-  overflow-x: auto;
-  display: block;
 }
 
 table thead {

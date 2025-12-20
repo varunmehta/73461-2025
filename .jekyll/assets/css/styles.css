@@ -1,10 +1,11 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", "Inter Fallback", var(--pico-font-family);
+  font-weight: 700;
+}
+
 h1 {
   font-size: 4rem;
-  font-family: "Roboto Slab", var(--pico-font-family);
-  font-optical-sizing: auto;
   font-weight: 800;
-  font-style: normal;
-  /* hyphens: auto; */
 }
 pre {
   margin-top: calc(var(--pico-spacing) / 2);
